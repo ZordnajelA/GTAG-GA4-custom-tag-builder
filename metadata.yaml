@@ -1,5 +1,5 @@
 homepage: "https://zielinsky.alejand.ro"
 documentation: "https://www.example.com/documentation"
 versions:
-  - sha: 
+  - sha: 1c851244daebac024db61fc63586e46dca268e88
     changeNotes: Initial release.
