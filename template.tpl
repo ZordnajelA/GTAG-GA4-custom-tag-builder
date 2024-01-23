@@ -6,7 +6,11 @@
   "version": 1,
   "securityGroups": [],
   "displayName": "GTAG/GA4 Custom Tag Builder",
-  "categories": ["ANALYTICS", "UTILITY", "PERSONALIZATION"],
+  "categories": [
+    "ANALYTICS",
+    "UTILITY",
+    "PERSONALIZATION"
+  ],
   "brand": {
     "id": "brand_dummy",
     "displayName": "Alejandro Zielinsky"
@@ -328,7 +332,7 @@ ___TEMPLATE_PARAMETERS___
         "type": "EQUALS"
       }
     ],
-    "help": "If you have a custom variable for the items present in you ecommerce event, feel free to add the variable here.\n\nOtherwise, the tag will try to acquire it from the dataLayer.push() of this event."
+    "help": "If you have a custom variable for the items present in your ecommerce event, feel free to add the variable here.\n\u003cbr\u003e\nShould be a JavaScript object, for example:\n\u003cbr\u003e\u003cbr\u003e\nfunction() { \u003cbr\u003e\n  var items \u003d []; \u003cbr\u003e\n  \u003cbr\u003e\n  items.push(\u003cbr\u003e \n    {\u003cbr\u003e\n      item_id: \"TEST-SKU\",\u003cbr\u003e\n      item_name: \"TEST-NAME\",\u003cbr\u003e\n      affiliation: \"TEST-AFFILIATION\",\u003cbr\u003e\n      coupon: \"TEST-COUPON\",\u003cbr\u003e\n      item_brand: \"TEST-BRAND\",\u003cbr\u003e\n      item_variant: \"TEST-VARIANT\",\u003cbr\u003e\n      price: 0.01,\u003cbr\u003e\n      quantity: 1  \u003cbr\u003e\n    }\u003cbr\u003e\n  );\u003cbr\u003e\n  \u003cbr\u003e\n  return items;\u003cbr\u003e\n}"
   },
   {
     "type": "GROUP",
@@ -1408,7 +1412,7 @@ const copyFromDataLayer = require('copyFromDataLayer');
 const JSON = require('JSON');
 const readTitle = require('readTitle');
 
-log(data.defaultSettingsVariable);
+//log(data.defaultSettingsVariable);
 
 let timestamp_millis = getTimestampMillis();
 const eventType = data.eventType;
@@ -1698,6 +1702,7 @@ if(data.eventType == "custom_event"){ //Send a custom event
   ecommerce.items = ecommerce_items;
   
   ecommerce.send_to = measurementId;
+  log("ecommerce ---",ecommerce);
   gtag('event', event_name, ecommerce);
   
 }else{ //Send any other recommended event
@@ -1918,6 +1923,6 @@ setup: ''
 
 ___NOTES___
 
-Created on 1/23/2024, 9:47:19 PM
+Created on 1/23/2024, 10:41:21 PM
 
 
