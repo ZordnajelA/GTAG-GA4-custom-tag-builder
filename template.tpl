@@ -1440,8 +1440,8 @@ let forbiddenDataLayerParameters = ["event", "gtm.uniqueEventId", "callback"];
 const sendEventToServer = true;
 
 const transport = {
-  hostname: 'tms.alejand.ro',
-  path: '/'
+  hostname: 'tms.your-domain.com',
+  path: '/some/path' //If it's the root, just leave '/' 
 };
 
 
