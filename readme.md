@@ -1,7 +1,11 @@
 
 # GTAG/GA4 custom tag builder
 
-Provide additional customization options to Google Tag's own native template
+Provide additional customization options to Google Tag's own native template.
+
+The template has taken inspiration from these two:
+- [gtm-improved-ga4](https://github.com/WebMechanix/gtm-improved-ga4)
+- [dataLayer picker](https://github.com/gtm-templates-simo-ahava/data-layer-picker)
 
 
 ## Why build this?
