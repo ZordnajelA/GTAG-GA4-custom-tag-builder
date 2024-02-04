@@ -1,5 +1,7 @@
 homepage: "https://zielinsky.alejand.ro"
-documentation: "https://www.example.com/documentation"
+documentation: "https://github.com/ZordnajelA/GTAG-GA4-custom-tag-builder"
 versions:
+  - sha: 62343967493776953883f9830c774d1754384d1a
+    changeNotes: Documentation changes
   - sha: 15625949e4ac974eb652560d2d88aa0a3dc617da
     changeNotes: Initial release.
