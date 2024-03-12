@@ -1445,7 +1445,7 @@ let forbiddenDataLayerParameters = ["event", "gtm.uniqueEventId", "callback"];
  * Make sure you change the sendEventToServer flag to TRUE
  * as well as adding the necessary permissions for the new host
  */
-const sendEventToServer = true;
+const sendEventToServer = false;
 
 const transport = {
   hostname: 'tms.your-domain.com',
